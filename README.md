@@ -93,7 +93,7 @@ def draw(G, colors):
 
 ## Como usar
 
-O primeiro passo é importar e usar as funções que já foram criadas, e a biblioteca `networkx` para criar os gráficos.
+O primeiro passo é importar as funções que já foram criadas e a biblioteca `networkx` para criar os gráficos.
 
 ```
 from greedy_coloring import greedy_coloring
