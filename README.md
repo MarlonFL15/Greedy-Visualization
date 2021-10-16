@@ -93,7 +93,12 @@ def draw(G, colors):
 
 ## Como usar
 
-O primeiro passo é importar as funções que já foram criadas e a biblioteca `networkx` para criar os gráficos.
+Antes de tudo, precisamos baixar o projeto e entrar no diretório.
+
+    $ git clone https://github.com/MarlonFL15/Greedy-Visualization.git
+    $ cd Greedy-Visualization
+
+O próximo passo é importar as funções que já foram criadas e a biblioteca `networkx` para criar os gráficos.
 
 ```
 from greedy_coloring import greedy_coloring
