@@ -122,3 +122,6 @@ colors = greedy_coloring(G)
 draw(G, colors)
 ```
 
+### Demonstração do algoritmo de visualização: 
+
+![result](https://github.com/MarlonFL15/Greedy-Visualization/blob/main/result.gif)
