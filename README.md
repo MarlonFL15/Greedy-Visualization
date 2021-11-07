@@ -8,23 +8,21 @@ O problema é encontrar uma maneira de colorir os vértices de um gráfico de fo
 
 O menor número de cores necessárias para colorir um gráfico G é chamado de **número cromático**.
 
-O problema de encontrar o número cromático de um grafo é dado como NP completo, logo, não existe algoritmo eficiente o suficiente para resolvê-lo. No entanto, existem algoritmos eficientes que podem chegar em resultados aproximados
+O problema de encontrar o número cromático de um grafo é dado como NP completo, logo, não existe algoritmo eficiente o suficiente para resolvê-lo. No entanto, existem algoritmos eficientes que podem chegar em resultados aproximados.
 
 ## Descrição do algoritmo Greedy
 
 O algoritmo Greedy não garante achar o número mínimo de cores. Mas garante um limite superior de d + 1 cores, onde d é o grau máximo de um vértice no grafo.
 O funcionamento do algoritmo é bem simples:
 
-1. Pinte o primeiro vértice com a primeira cor
+1. Pinte o primeiro vértice com a primeira cor;
 2. Faça o seguinte para os próximos vértices:
     
-    Para cada vértice, pinte-o com a menor cor que não foi utilizada em nenhum vértice adjacente. Caso todas as cores usadas anteriormente não estejam disponíveis, adicione uma nova cor ao vértice atual.
+    Para cada vértice, pinte-o com a menor cor que não foi utilizada em nenhum vértice adjacente. Caso todas as cores usadas anteriormente não estejam disponíveis, adicione uma nova cor ao vértice atual;
 
 ## Implementação do algoritmo usando python
 
-A seguir, está a implementação do algoritmo.
-
-Observação: O algortimo recebe por parâmetro um grafo da biblioteca `networkx`
+A seguir, está a implementação do algoritmo:
 
 ```
 def greedy_coloring(G):
@@ -58,11 +56,13 @@ def greedy_coloring(G):
 
 A função acima retorna um dicionário, em que a chave é o vértice e o valor é a cor.
 
+Observação: A função recebe por parâmetro um grafo da biblioteca `networkx`.
+
 ## Implementação do método de Desenhar
 
-Além da implementação do algoritmo, também é possível usar bibliotecas como `networkx` e `matplotlib` para visualizar o grafo sendo colorido pelo algoritmo.
+Além da implementação do algoritmo, também é possível usar as bibliotecas `networkx` e `matplotlib` para visualizar o grafo sendo colorido pelo algoritmo.
 
-A função recebe por parâmetro o grafo e o retorno da função `greedy_coloring`.
+A função recebe por parâmetro o grafo e o retorno da função `greedy_coloring`:
 
 ```
 import networkx as nx
@@ -93,12 +93,13 @@ def draw(G, colors):
 
 ## Como usar
 
-Antes de tudo, precisamos baixar o projeto e entrar no diretório.
+Antes de tudo, precisamos baixar o projeto, entrar no diretório e instalar as bibliotecas utilizadas:
 
     $ git clone https://github.com/MarlonFL15/Greedy-Visualization.git
     $ cd Greedy-Visualization
+    $ pip install -r requirements.txt
 
-O próximo passo é importar as funções que já foram criadas e a biblioteca `networkx` para criar os gráficos.
+O próximo passo é importar as funções que já foram implementadas e a biblioteca `networkx` para manipular os grafos:
 
 ```
 from greedy_coloring import greedy_coloring
@@ -106,7 +107,7 @@ from draw import draw
 import networkx as nx
 ```
 
-Após fazer as importações, crie o grafo de teste para servir como parâmetro para o algoritmo
+Após fazer as importações, crie o grafo de teste que será utilizado como parâmetro para o algoritmo:
 
 
 ```
